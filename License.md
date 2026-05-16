@@ -1,1 +1,0 @@
-Do not use for commercial or non-commercial purposes without the author's permission.
