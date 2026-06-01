@@ -1,24 +1,9 @@
 #include <stdio.h>
+#include <limits.h>
 int main(){
-int c,g2;
-g2=0;
-while((c=getchar())!=EOF){
-    if (c!=32 && c!=9){
-        g2=0;
-        putchar(c);
-    }
-    else{
-        if(c==32 && g2!=1){
-        g2++;
-        c= 10;
-        putchar(c);
-        }
-        if(c==9 && g2!=1){
-        g2++;
-        c= 10;
-        putchar(c);
-        }
-    }
-}
-
+    printf("Char:min(%d),max(%d)\n",CHAR_MIN,CHAR_MAX);
+    printf("Int:min(%d),max(%d)\n",INT_MIN,INT_MAX);
+    printf("Short:min(%d),max(%d)\n",SHRT_MIN,SHRT_MAX);
+    printf("Long:min(%d),max(%d)\n",LONG_MIN,LONG_MAX);
+    printf("Long:min(0),max(%llu)\n",ULONG_MAX);
 }
