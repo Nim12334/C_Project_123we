@@ -11,6 +11,9 @@ for(int x=0;x<=15;x++){
 int main(){
 
 htoi();
+int n=4;
+int x=n++;
+printf("%d",x);
 
 
 }
