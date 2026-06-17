@@ -1,19 +1,56 @@
 #include <stdio.h>
-void htoi(){
-int t1[15]={0x0,0x1,0x2,0x3,0x4,0x5,0x6,0x7,0x8,0x9,0xA,0xB,0xC,0xD,0xE,0xF};
-printf("0x\n");
-for(int x=0;x<=15;x++){
+void unsqueze(char s1[],char s2[]){
+int x=0;
+int s1_i=0;
+int s2_i=0;
+while(x!=1){
+if(s1[s1_i]!='`'){
+    int y=0;
+    while(y!=1){
+        if(y==0&&s2[s2_i]!='`'&&s2[s2_i]==s1[s1_i]){
+            s1[s1_i]=0;
+            s2_i=0;
+            y=1;
 
-    printf("%d\n",t1[x]);
+        }
+        else if(y==0&&s2[s2_i]!='`'&&s2[s2_i]!=s1[s1_i]){
+            s2_i++;
+        }
+        else if(y==0&&s2[s2_i]=='`'){
+            s2_i=0;
+            y=1;
+        }
+    }
+    s1_i++;
+
+
 }
+else{
+
+    x=1;
+}
+
+
+}
+int z=0;
+x=0;
+while(z!=1){
+    if(s1[x]=='`'){
+      z=1;
+    }
+    if(z!=1){
+    printf("%c",s1[x]);
+
+        x++;
+    }
+}
+
+
 
 }
 int main(){
-
-htoi();
-int n=4;
-int x=n++;
-printf("%d",x);
-
+char h[40]="You are idiot(btW)&??!!`";
+char h1[]="Ya)&W!?`";
+unsqueze(h,h1);
 
 }
